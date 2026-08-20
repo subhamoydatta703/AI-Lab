@@ -1,0 +1,19 @@
+{
+  "risk_bands": {
+    "low_cut": 0.182,
+    "high_cut": 0.858
+  },
+  "rationale": {
+    "method": "percentile sweep on out-of-fold predicted probabilities",
+    "low_percentile": 25,
+    "high_percentile": 85,
+    "cutoffs": [
+      0.182,
+      0.858
+    ],
+    "low_band_disease_share": 0.049,
+    "high_band_disease_share": 0.973,
+    "separation_score": 1.924,
+    "threshold_for_disease": 0.3
+  }
+}

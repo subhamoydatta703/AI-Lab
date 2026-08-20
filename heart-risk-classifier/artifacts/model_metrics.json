@@ -1,0 +1,46 @@
+{
+  "test": {
+    "accuracy": 0.7705,
+    "recall": 1.0,
+    "threshold": 0.3
+  },
+  "threshold": 0.3,
+  "risk_bands": {
+    "low_cut": 0.182,
+    "high_cut": 0.858
+  },
+  "band_rationale": {
+    "method": "percentile sweep on out-of-fold predicted probabilities",
+    "low_percentile": 25,
+    "high_percentile": 85,
+    "cutoffs": [
+      0.182,
+      0.858
+    ],
+    "low_band_disease_share": 0.049,
+    "high_band_disease_share": 0.973,
+    "separation_score": 1.924,
+    "threshold_for_disease": 0.3
+  },
+  "cv_summary": {
+    "baseline_logistic_regression": {
+      "accuracy": 0.8429,
+      "recall": 0.7834
+    },
+    "tuned_random_forest": {
+      "accuracy": 0.8306,
+      "recall": 0.7921
+    },
+    "lr_rf_soft_voting": {
+      "accuracy": 0.8346,
+      "recall": 0.7739
+    }
+  },
+  "best_rf_params": {
+    "clf__max_depth": null,
+    "clf__min_samples_leaf": 1,
+    "clf__n_estimators": 100
+  },
+  "selected_model": "random_forest",
+  "note": "5-fold CV and held-out test numbers reported as-is. If accuracy < 90%, this is the honest figure (see README)."
+}
